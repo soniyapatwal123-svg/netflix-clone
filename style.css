@@ -1,0 +1,477 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    scroll-behavior: smooth;
+    font-family: sans-serif;
+    color: white;
+    overscroll-behavior: none;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+#bg {
+    width: 100%;
+    height: 95vh;
+    object-fit: cover;
+    z-index: -10;
+    position: absolute;
+}
+
+#page1 {
+    height: 95vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#main {
+    background-color: rgba(0, 0, 0, 0.616);
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    object-fit: cover;
+    position: relative;
+}
+
+nav {
+    height: auto;
+    width: 100%;
+    padding: 2.25vh 7.75vw;
+    display: flex;
+    background: linear-gradient(to bottom, rgb(0, 0, 0), transparent);
+    align-items: center;
+    position: absolute;
+    z-index: 100;
+}
+
+#logo {
+    height: 100%;
+}
+
+#logo>svg {
+    color: red;
+    fill: red;
+    height: 2.5rem;
+    /* rem for font scaling */
+    width: 9.25rem;
+    /* rem for font scaling */
+}
+
+#top-right {
+    margin-left: auto;
+    display: flex;
+    height: 100%;
+}
+
+.selectbox {
+    margin-right: 1vw;
+    /* vw for responsive margin */
+    padding: 0.5vh 1.5vw;
+    /* vh and vw for responsive padding */
+    height: auto;
+    width: auto;
+    border: 0.05vw solid grey;
+    /* vw for border size */
+    border-radius: 0.3vh;
+    background-color: rgba(0, 0, 0, 0.466);
+}
+
+select {
+    padding: auto;
+    background-color: transparent;
+    color: white;
+    border: none;
+    outline: none;
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    /* rem for font scaling */
+}
+
+option {
+    color: black;
+}
+
+#signin {
+    /* margin: 0 1.5vw; vw for margin */
+    background-color: red;
+    padding: 0.5vh 1.5vw;
+    /* vh and vw for padding */
+    border: none;
+    border-radius: 0.3vh;
+    color: white;
+    font-size: 1rem;
+    /* rem for font scaling */
+    text-transform: capitalize;
+}
+
+#page1 h1 {
+    color: white;
+    font-family: sans-serif;
+    font-size: 4rem;
+    /* rem for font scaling */
+    text-align: center;
+    font-weight: 800;
+}
+
+#page1 p {
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+    margin: 1.5vh 0;
+    /* vh for vertical margin */
+}
+
+#start {
+    font-size: 1.2rem;
+    /* rem for font scaling */
+}
+
+#input,
+#input2 {
+    display: flex;
+    align-items: center;
+    width: 32.5vw;
+    /* vw for width */
+    justify-content: center;
+}
+
+#input>input,
+#input2>input {
+    width: 60%;
+    height: 100%;
+    margin-right: 1vw;
+    /* vw for margin */
+    border-radius: 0.5vw;
+    /* vw for border radius */
+    border: 0.05vw solid grey;
+    /* vw for border size */
+    background-color: rgba(24, 23, 23, 0.479);
+    padding: 1.5vh;
+    /* vh for padding */
+    color: white;
+    font-size: 1.2rem;
+    /* rem for font scaling */
+}
+
+#input>input::placeholder,
+#input2>input::placeholder {
+    color: grey;
+}
+
+#submit,
+#submit2 {
+    flex: 4;
+    background-color: red;
+    color: white;
+    display: flex;
+    padding: 0.8vh 1vw;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+    /* vw for spacing */
+    font-size: 1.4rem;
+    /* rem for font scaling */
+    border: none;
+    border-radius: 0.5vw;
+    /* vw for border radius */
+}
+
+#container {
+    position: absolute;
+    height: auto;
+    width: 100%;
+}
+
+#trendingcontainer {
+    height: 6rem;
+    width: 130%;
+    position: absolute;
+    left: -15%;
+    top: -8vh;
+    border-radius: 700% 700% 0 0;
+    background: radial-gradient(50% 500% at 50% -420%, rgba(64, 97, 231, 0.4) 80%, rgba(0, 0, 0, 0.1) 100%), black;
+}
+
+#line {
+    height: inherit;
+    top: -4%;
+    z-index: -1;
+    position: relative;
+    border-radius: inherit;
+    background: linear-gradient(to right,
+            rgba(33, 13, 22, 1) 16%,
+            rgba(184, 40, 105, 1),
+            rgba(229, 9, 20, 1),
+            rgba(184, 40, 105, 1),
+            rgba(33, 13, 22, 1) 84%);
+}
+
+#trendingcontainer h1 {
+    margin-left: 22.5%;
+    position: absolute;
+    bottom: 15%;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 100;
+    text-transform: capitalize;
+}
+
+#page2 {
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0);
+    position: relative;
+    /* top: 30%; */
+    /* border: 2px solid red; */
+}
+
+#country {
+    margin: 0.75% 0 0 8.5%;
+    display: flex;
+}
+
+#cardbox {
+    width: 90%;
+    margin: 2rem auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cardscontainer {
+    /* width: 85%; */
+    display: flex;
+    padding: 2rem;
+    color: white;
+    gap: 2vw;
+    justify-items: center;
+    overflow-x: scroll;
+
+}
+
+#cardbox button {
+    width: 2%;
+    margin: 1%;
+    height: 7rem;
+    background-color: rgba(49, 49, 49, 0.521);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    transition: all 0.5s;
+}
+
+#cardscontainer::-webkit-scrollbar {
+    display: none;
+}
+
+.cards {
+    border-radius: 0.5rem;
+    /* border: 1px solid red;  */
+    display: flex;
+    position: relative;
+
+    transform: scale(0.9);
+    transition: all 0.3s;
+}
+
+.cards:hover {
+    transform: scale(1);
+}
+
+.cards img {
+    border-radius: inherit;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#left-button {
+    display: none;
+}
+
+.cards h1 {
+    position: absolute;
+    bottom: 0;
+    left: -2rem;
+    color: black;
+    font-size: 8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-text-stroke: 2px white;
+}
+
+#reasons {
+    width: 90%;
+    margin: 2rem auto;
+    padding: 1rem;
+    color: white;
+}
+
+#reasons h3 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-left: 1rem;
+    margin-top: 1.8rem;
+}
+
+#reasons p {
+    margin: 1rem;
+    font-size: 16px;
+    font-weight: 400;
+    color: #565569;
+}
+
+#carouselbox {
+    display: flex;
+    height: 30vh;
+}
+
+.carousels {
+    width: 25%;
+    margin: 1vh;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #1b033b, #22083d, #45124f, #560d4a);
+}
+
+.carousels svg {
+    position: relative;
+    bottom: -15%;
+    right: -75%;
+}
+
+
+.faq-container {
+    width: 90%;
+    margin: 50px auto;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+
+
+.faq-item {
+    padding: 0.1rem;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 1rem 2rem;
+    background-color: #414141;
+}
+
+.icon {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.faq-answer {
+    max-height: 0;
+    margin: 5px auto;
+    overflow: hidden;
+    padding: 0 2rem;
+    background-color: #414141;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #ccc;
+    transition: all 0.5s linear;
+    opacity: 0;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 1000px; /* or any value that would accommodate your content */
+    padding: 1rem 2rem;
+    opacity: 1;
+}
+
+.faq-item.active .icon {
+    transform: rotate(45deg);
+}
+
+#bottominput {
+    width: 90%;
+    margin: auto;
+}
+
+#input2 {
+    margin: 1rem auto 0 auto ;
+    width: 70%;
+}
+
+#submit2 {
+    flex: none;
+    width: 20%;
+}
+
+#bottominput h4 {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.footer {
+    padding: 20px 40px;
+    background-color: #000;
+    color: #757575;
+}
+
+.footer-container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.footer-question {
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.footer-question a {
+    color: #fff;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    color: #757575;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-links ul li a:hover {
+    text-decoration: underline;
+}
+
+.selectbox{
+    width: fit-content;
+}
+
+
